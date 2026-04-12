@@ -60,16 +60,8 @@ const CustomCursor = () => {
       />
       {/* Floating Spotlight behind the cursor spanning the pages */}
       <motion.div
+        className="cursor-spotlight"
         style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '600px',
-          height: '600px',
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(69,243,255,0.05) 0%, rgba(187,134,252,0.02) 40%, rgba(0,0,0,0) 80%)',
-          pointerEvents: 'none',
-          zIndex: 1,
           x: cursorXSpring,
           y: cursorYSpring,
           translateX: '-50%',

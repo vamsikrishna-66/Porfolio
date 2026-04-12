@@ -66,6 +66,19 @@ body {
   opacity: 0;
 }
 
+.cursor-spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(69, 243, 255, 0.15) 0%, rgba(187, 134, 252, 0.08) 40%, transparent 80%);
+  pointer-events: none;
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
 /* Apple Dock Navigation */
 .apple-dock {
   position: fixed;
@@ -950,13 +963,16 @@ body.light-mode .theme-toggle-btn:hover {
   box-shadow: 0 8px 30px rgba(0,0,0,0.6);
 }
 
+body.light-mode .cursor-spotlight {
+  background: radial-gradient(circle, rgba(2, 132, 199, 0.08) 0%, rgba(126, 34, 206, 0.05) 40%, transparent 80%);
+}
 
 /* Fix Hero Elements in light mode */
 body.light-mode .hero-container {
   border-bottom-color: rgba(0,0,0,0.1);
 }
 body.light-mode .hero-grid-bg {
-  background: radial-gradient(circle at center, rgba(2, 132, 199, 0.05) 0%, transparent 60%);
+  background: none;
 }
 body.light-mode .grid-space {
   background-image: 
@@ -1011,6 +1027,12 @@ body.light-mode .modal-close {
 body.light-mode .modal-close:hover {
   background: #0f172a;
   color: #fff;
+}
+
+body.light-mode .exp-date {
+  opacity: 1;
+  font-weight: 600;
+  color: var(--accent-purple);
 }
 body.light-mode .modal-desc, 
 body.light-mode .exp-bullets li, 
