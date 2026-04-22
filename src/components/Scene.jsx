@@ -40,12 +40,12 @@ const Node = ({ position, title, subtitle, imagePath, left = true }) => {
         </Text>
         <Suspense fallback={null}>
           {imagePath && (
-            <Image 
-              url={imagePath} 
-              transparent 
+            <Image
+              url={imagePath}
+              transparent
               opacity={0.6}
-              scale={[10, 6]} 
-              position={[left ? 6 : -6, -1, -5]} 
+              scale={[10, 6]}
+              position={[left ? 6 : -6, -1, -5]}
             />
           )}
         </Suspense>
@@ -60,56 +60,56 @@ const Scene = () => {
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 5]} intensity={1.5} color="#bb86fc" />
       <pointLight position={[-10, -10, -10]} intensity={1} color="#45f3ff" />
-      
+
       {/* Hyper-realistic deep space particle field */}
       <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
-      
+
       <MovingCamera />
 
       {/* Sequence of 3D floating monoliths through the Z space */}
-      
+
       {/* Z = 5 (Hero) */}
-      <Node 
-        position={[-6, 1, 5]} 
-        title="VAMSIKRISHNA\nCHINNAM" 
-        subtitle="CREATIVE SOFTWARE ENGINEER & CLOUD ARCHITECT" 
-        imagePath="/images/bg_home.png"
+      <Node
+        position={[-6, 1, 5]}
+        title="VAMSIKRISHNA\nCHINNAM"
+        subtitle="CREATIVE SOFTWARE ENGINEER & CLOUD ARCHITECT"
+        imagePath={`${import.meta.env.BASE_URL}images/bg_home.png`}
         left={true}
       />
 
       {/* Z = -10 */}
-      <Node 
-        position={[2, -2, -10]} 
-        title="EXPERIENCE: ISRO" 
-        subtitle="Vision Transformers (ViT) on Satellite Imagery, achieving high-accuracy trajectory analysis from raw CV pipelines." 
-        imagePath="/images/bg_space.png"
+      <Node
+        position={[2, -2, -10]}
+        title="EXPERIENCE: ISRO"
+        subtitle="Vision Transformers (ViT) on Satellite Imagery, achieving high-accuracy trajectory analysis from raw CV pipelines."
+        imagePath={`${import.meta.env.BASE_URL}images/bg_space.png`}
         left={false}
       />
 
       {/* Z = -25 */}
-      <Node 
-        position={[-8, 3, -25]} 
-        title="EXPERIENCE: BREATHEIT" 
-        subtitle="Scalable GCP Microservices, REST APIs, scaling cloud platforms for production deployments." 
-        imagePath="/images/bg_cloud.png"
+      <Node
+        position={[-8, 3, -25]}
+        title="EXPERIENCE: BREATHEIT"
+        subtitle="Scalable GCP Microservices, REST APIs, scaling cloud platforms for production deployments."
+        imagePath={`${import.meta.env.BASE_URL}images/bg_cloud.png`}
         left={true}
       />
 
       {/* Z = -40 */}
-      <Node 
-        position={[2, 0, -40]} 
-        title="PROJECT: AI COACH" 
-        subtitle="LLaMA & Gemini multi-modal inference architecture. Orchestrating LLM safeguards and real-time inference." 
-        imagePath="/images/bg_ai.png"
+      <Node
+        position={[2, 0, -40]}
+        title="PROJECT: AI COACH"
+        subtitle="LLaMA & Gemini multi-modal inference architecture. Orchestrating LLM safeguards and real-time inference."
+        imagePath={`${import.meta.env.BASE_URL}images/bg_ai.png`}
         left={false}
       />
-      
+
       {/* Z = -55 */}
-      <Node 
-        position={[-6, -1, -55]} 
-        title="PROJECT: STORAGE" 
-        subtitle="High-Octane MongoDB & AWS S3 Object distribution backend with robust RBAC." 
-        imagePath="/images/bg_business.png"
+      <Node
+        position={[-6, -1, -55]}
+        title="PROJECT: STORAGE"
+        subtitle="High-Octane MongoDB & AWS S3 Object distribution backend with robust RBAC."
+        imagePath={`${import.meta.env.BASE_URL}images/bg_business.png`}
         left={true}
       />
 
